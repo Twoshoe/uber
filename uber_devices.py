@@ -5,8 +5,8 @@ import requests
 from config import CONFIG
 
 #pulls creds from ~/.uber.ini
-username = CONFIG.get('uber', 'USERNAME')
-api_token = CONFIG.get('uber','ctoken')
+username = CONFIG.get('uber', 'uber_cuser')
+api_token = CONFIG.get('uber','uber_ctoken')
 
 #for initial login
 HEADERS = {
@@ -16,12 +16,12 @@ HEADERS = {
 
 #paremters for access_token gen
 PARAMETERS = {
-        'username': USERNAME,
-        'token': PASSWORD,
+        'username': username,
+        'token': api_token,
         }
 
 #def main():
-#    '''Logs into BMS by Kaseya and adds locations (stored as json) to an account'''
+#    '''Logs into uber and adds device information (stored as json) to an account'''
 #    #post header + parameter to receive json data with bearer access_token
 #    auth_response = requests.post(API_URL, headers=HEADERS, data=PARAMETERS)
 
