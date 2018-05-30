@@ -5,8 +5,8 @@ import requests
 from config import CONFIG
 
 #pulls creds from ~/.uber.ini
-username = CONFIG.get('uber', 'uber_cuser')
-api_token = CONFIG.get('uber','uber_ctoken')
+USERNAME = CONFIG.get('uber', 'uber_cuser')
+API_TOKEN = CONFIG.get('uber','uber_ctoken')
 
 #for initial login
 HEADERS = {
@@ -16,8 +16,8 @@ HEADERS = {
 
 #paremters for access_token gen
 PARAMETERS = {
-        'username': username,
-        'token': api_token,
+        'username': USERNAME,
+        'token': API_TOKEN,
         }
 
 #def main():
