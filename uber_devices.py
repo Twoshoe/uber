@@ -3,6 +3,7 @@ import sys
 import json
 import requests
 from config import CONFIG
+import ubersmith
 
 #pulls creds from ~/.uber.ini
 USERNAME = CONFIG.get('UBER', 'uber_cuser')
